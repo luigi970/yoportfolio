@@ -1,6 +1,6 @@
 # yoportfolio
 ### Hola, Soy Luis 👋
-Yo Programo: proyecto portfolio
+Argentina Programa: Proyecto Portfolio
 
 <h3 align="left">Front End</h3>
 <p align="left">

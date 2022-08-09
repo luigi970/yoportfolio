@@ -1,0 +1,464 @@
+/**
+* Genericos
+**/
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300 !important;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #7fd6f2;
+  border-color: #7fd6f2;
+}
+.btn-primary:hover {
+  background-color: #164359;
+  border-color: #164359;
+}
+.btn-primary:active {
+  background-color: #7fd6f2;
+  border-color: #7fd6f2;
+}
+
+/**
+* Navegacion
+**/
+.menu {
+  background: linear-gradient(90deg, #164359 10%, #7fd6f2 100%);
+}
+.menu li {
+  padding: 0 0.3rem;
+}
+.menu .navbar-nav .nav-link {
+  color: #fff;
+}
+.menu .navbar-nav .nav-link:hover, .menu .navbar-nav .nav-link:focus {
+  color: #7fd6f2;
+}
+.menu .navbar-nav .nav-link.disabled {
+  color: rgba(0, 0, 0, 0.3);
+}
+.menu .navbar-nav .show > .nav-link,
+.menu .navbar-nav .nav-link.active {
+  color: #164359;
+}
+/**
+* Botones
+*/
+.btn-rounded {
+  position: relative;
+  padding: 0.8375rem 4.375rem 0.8375rem 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  border: 0.1rem solid rgba(255, 255, 255, 0.6);
+  background-color: #fff;
+  display: block;
+}
+.btn-rounded span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #7fd6f2;
+  width: 2.5rem;
+  height: 2.5rem;
+  right: 5px;
+  border-radius: 50%;
+}
+.btn-rounded span i {
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+.btn-rounded:hover {
+  background: linear-gradient(90deg, #164359 10%, #7fd6f2 100%);
+  color: #fff;
+}
+.btn-rounded:hover span {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/**
+* CRUD botones
+**/
+.btn {
+  border-color: transparent !important;
+}
+.btn-crear, .btn-editar, .btn-eliminar {
+  position: relative;
+  margin: 2px;
+  border: 0;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.btn-crear span, .btn-editar span, .btn-eliminar span {
+  position: absolute;
+  /*top: 50%;
+  right: 5px;*/
+  left: 0;
+  top: 12px;
+  transform: translateY(-50%);
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+}
+/**
+* Boton crear
+**/
+.btn-crear span {
+  background-color: #7fd6f2;
+}
+.btn-crear span i {
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 1rem;
+}
+.btn-crear:hover span {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+/**
+* Boton editar
+**/
+.btn-editar span {
+  background-color: #7fd6f2;
+}
+.btn-editar span i {
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 1rem;
+}
+.btn-editar:hover span {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+/**
+* Boton eliminar
+**/
+.btn-eliminar span {
+  background-color: var(--bs-body-color);
+}
+.btn-eliminar span i {
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 1rem;
+}
+.btn-eliminar:hover span {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 0;
+}
+
+
+/**
+* Header
+*/
+.display-3 {
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  font-family: "Spicy Rice", cursive;
+}
+.display-3--intro {
+  display: inline-block;
+  font-weight: 100;
+  font-family: "Spicy Rice", cursive;
+  line-height: 1;
+}
+.display-3--description {
+  font-size: 1.5rem;
+  display: block;
+  margin-top: 1.2rem;
+  text-transform: none;
+  font-weight: 600;
+  font-family: "Source Sans Pro", sans-serif;
+}
+@media (min-width: 992px) {
+  .display-3--description {
+    font-size: 2rem;
+    display: inline-block;
+  }
+}
+
+.intro-section {
+  background: linear-gradient(90deg, #164359 10%, #7fd6f2 100%);
+  padding: 5rem 0 0 0;
+  width: 100%;
+  height: 100%;
+}
+
+/**
+* Animacion Circulos
+*/
+@keyframes pulse-border {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+@keyframes scroll {
+  1% {
+    opacity: 1;
+    top: 30%;
+  }
+  20% {
+    opacity: 1;
+    top: 50%;
+  }
+  60% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 30%;
+  }
+}
+.intro .pulsos {
+  position: relative;
+}
+.intro .pulsos div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.intro .pulsos div span i {
+  font-size: 16rem;
+  color: transparent;
+}
+.border-animation {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 16rem;
+  height: 16rem;
+  border: 0.55rem solid #fff;
+  border-radius: 50%;
+  animation: pulse-border 1.5s linear infinite;
+}
+.border-animation--border-1 {
+  animation-delay: 1s;
+}
+.border-animation--border-2 {
+  animation-delay: 1.5s;
+}
+
+/**
+* Mouse animado
+*/
+@media (max-width: 575.98px) {
+  #mouse {
+    display: none;
+  }
+}
+.down {
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+.down .mouse {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 50px;
+  margin: 0 auto;
+  border: 2px solid #333;
+  border-radius: 24px;
+  opacity: 0.6;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.down .mouse span {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 50%;
+  width: 8px;
+  height: 12px;
+  margin: 0px 0 0 -4px;
+  background: #333;
+  border-radius: 20px;
+  animation: scroll 2s linear infinite;
+}
+
+.down_white.down .mouse {
+  border-color: #fff;
+}
+.down_white.down .mouse span {
+  background: #fff;
+}
+
+
+/**
+* Secciones
+**/
+.info, .about, .experiencia, .educacion, .skills, .proyectos, .contacto {
+  margin: 10px 0;
+}
+
+/**
+* Iconos
+**/
+.icon {
+  font-size: 1.9rem;
+  color: #7fd6f2;
+}
+@media (min-width: 992px) {
+  .content_section .icon {
+    font-size: 2.5rem;
+  }
+}
+
+
+.visible_item {
+  display: none;
+}
+
+/**
+* Seccion Proyectos
+*/
+
+
+/**
+* Seccion Contacto
+*/
+.gradient {
+  background: linear-gradient(90deg, #164359 10%, #7fd6f2 100%);
+}
+.cta-info {
+  padding: 3rem;
+  margin: 1rem 0;
+}
+.cta-info__list {
+  position: relative;
+  list-style-type: none;
+  display: block;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+.cta-info__list li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  font-weight: 600;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+.cta-info .rocket {
+  display: block;
+  margin: 0 auto;
+}
+
+.form {
+  padding: 3rem;
+}
+.form button {
+  border: none;
+  color: #fff;
+  text-transform: capitalize;
+}
+.form button a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+/**
+* Seccion Footer
+*/
+.contact-box {
+  position: relative;
+}
+.contact-box__icon {
+  width: 2rem;
+  stroke: #7fd6f2;
+  padding-top: 0.5rem;
+}
+@media (min-width: 576px) {
+  .contact-box__icon {
+    width: 4rem;
+  }
+}
+.contact-box__info {
+  padding: 0.4rem;
+  font-weight: 600;
+}
+.contact-box__info--title {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+@media (min-width: 576px) {
+  .contact-box__info--title {
+    font-size: 1.4rem;
+  }
+}
+.contact-box__info--title:hover {
+  color: #7fd6f2;
+}
+.contact-box__info--subtitle {
+  font-size: 0.8rem;
+  color: #6c757d;
+  text-decoration: none;
+}
+@media (min-width: 576px) {
+  .contact-box__info--subtitle {
+    font-size: 1rem;
+  }
+}
+.footer {
+  padding-top: 1rem;
+  background-color: #151414;
+}
+.footer-sm a {
+  color: #fff;
+}
+.footer-sm a i {
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+@media (min-width: 576px) {
+  .footer-sm a i {
+    font-size: 1.6rem;
+  }
+}
+.footer-sm a:hover {
+  color: #7fd6f2;
+}
+.footer-bottom {
+  background-color: #000;
+}
+.footer-bottom__copyright {
+  color: #6c757d;
+  font-weight: 400;
+}
+.footer-bottom__copyright a {
+  color: #dee2e6;
+  text-decoration: none;
+}
+.footer-bottom__copyright a:hover {
+  color: #7fd6f2;
+  text-decoration: underline;
+}
+
+/**
+* Boton volver arriba
+*/
+.back-to-top {
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  right: 1.875rem;
+  bottom: 1.875rem;
+  z-index: 9999;
+}
+.back-to-top i {
+  color: #fff;
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*# sourceMappingURL=style.css.map */
